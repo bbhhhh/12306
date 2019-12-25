@@ -120,8 +120,11 @@ class select:
         l = liftTicketInit(self)
         l.reqLiftTicketInit()
         getDrvicesID(self)
+        print("11111111")
         self.call_login()
+        print("22222222")
         check_user = checkUser(self)
+        print("333333333")
         t = threading.Thread(target=check_user.sendCheckUser)
         t.setDaemon(True)
         t.start()
@@ -131,6 +134,7 @@ class select:
         passenger = s.sendGetPassengerDTOs()
         wrapcache.set("user_info", passenger, timeout=9999999)
 
+        print("4444444444")
         now = datetime.datetime.now()
         if TickerConfig.ORDER_MODEL is 1:
             print(f"预售还未开始，阻塞中，预售时间为{TickerConfig.OPEN_TIME}, 当前时间为: {now.strftime('%H:%M:%S')}")
