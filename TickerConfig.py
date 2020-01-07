@@ -18,7 +18,7 @@ IS_PROXY = 0
 
 # 出发日期(list) "2018-01-06", "2018-01-07"
 STATION_DATES = [
-    "2020-01-22"
+    "2020-01-23"
 ]
 
 # 填入需要购买的车次(list)，"G1353"
@@ -27,7 +27,7 @@ STATION_DATES = [
 STATION_TRAINS = [
     #"G360",
     #"G1920"
-    "Z252"
+    "Z92"
 ]
 
 # 出发城市，比如深圳北，就填深圳就搜得到
@@ -49,7 +49,8 @@ TO_STATION = "西安"
 SET_TYPE = [
    # "二等座"
    # "硬座"
-   "无座"
+   #"无座"
+   "硬卧"
 ]
 # 乘车人(list) 多个乘车人ex:
 # "张三",
@@ -65,12 +66,6 @@ OPEN_TIME = "14:29:57"
 # 当余票小于乘车人，如果选择优先提交，则删减联系人和余票数一致在提交
 # bool
 IS_MORE_TICKET = False
-
-# 如果COOKIE_TYPE=3, 则需配置RAIL_EXPIRATION、RAIL_DEVICEID的值
-RAIL_EXPIRATION = "1577421194537"
-RAIL_DEVICEID = "ASXtF8veI_BTkVCU_S2mQ6tQkZvabpyCBR4FcTuumI3j3EWEiy0TjM672n7MT0U88HZaZTxVByiXHVmzju9kxq-v5_JOIOqrNfwnUf5K6rF-H1NSxfvvdyXgTnNHdETJ7VEzD7BiV_-acdocbJ2F1igeL-B8x1AP"
-# RAIL_EXPIRATION = "1577034103293"
-# RAIL_DEVICEID = "CDno29Erc_Pf3FSXb4dzq-Op64EhWrsi5yUZKVIKR1MAfYo2qFlCeXD8VkexY7_1qg-ClV-fE8j9jgVlPZxRh3wVc2iqLe_5A8sdr62qZx4B22JPF8lFCjpgTKZ5ODW90HJd5tiQsJ1KR9nOqHRxHj1FT5LEIwfw"
 
 
 # 12306登录账号
@@ -134,13 +129,19 @@ ORDER_TYPE = 2
 # 1=使用selenium获取devicesID
 # 2=使用网页端/otn/HttpZF/logdevice获取devicesId，这个接口的算法目前可能有点问题，如果登录一直302的请改为配置1
 # 3=自己打开浏览器在headers-Cookies中抓取RAIL_DEVICEID和RAIL_EXPIRATION，这个就不用配置selenium
-COOKIE_TYPE = 3
+COOKIE_TYPE = 1
 # 如果COOKIE_TYPE=1，则需配置chromeDriver路径,下载地址http://chromedriver.storage.googleapis.com/index.html
 # chromedriver配置版本只要和chrome的大版本匹配就行
-CHROME_PATH = "/usr/src/app/chromedriver"
-
+CHROME_PATH = "D:/tools/google/chromedriver.exe"
 # 为了docker37 准备的环境变量，windows环境可以不用管这个参数
 CHROME_CHROME_PATH = "/opt/google/chrome/google-chrome"
+
+# 如果COOKIE_TYPE=3, 则需配置RAIL_EXPIRATION、RAIL_DEVICEID的值
+RAIL_EXPIRATION = "1577421194537"
+RAIL_DEVICEID = "ASXtF8veI_BTkVCU_S2mQ6tQkZvabpyCBR4FcTuumI3j3EWEiy0TjM672n7MT0U88HZaZTxVByiXHVmzju9kxq-v5_JOIOqrNfwnUf5K6rF-H1NSxfvvdyXgTnNHdETJ7VEzD7BiV_-acdocbJ2F1igeL-B8x1AP"
+# RAIL_EXPIRATION = "1577034103293"
+# RAIL_DEVICEID = "CDno29Erc_Pf3FSXb4dzq-Op64EhWrsi5yUZKVIKR1MAfYo2qFlCeXD8VkexY7_1qg-ClV-fE8j9jgVlPZxRh3wVc2iqLe_5A8sdr62qZx4B22JPF8lFCjpgTKZ5ODW90HJd5tiQsJ1KR9nOqHRxHj1FT5LEIwfw"
+
 
 
 
