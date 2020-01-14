@@ -55,7 +55,7 @@ SET_TYPE = [
 # 乘车人(list) 多个乘车人ex:
 # "张三",
 # "李四"
-TICKET_PEOPLES = ["张华","边子洋","边海华"]
+TICKET_PEOPLES = ["张华"]
 
 # 下单模式 1 为预售，整点刷新，刷新间隔0.1-0.5S, 然后会校验时间，比如12点的预售，那脚本就会在12.00整检票，刷新订单
 #         2 是捡漏，捡漏的刷新间隔时间为0.5-3秒，时间间隔长，不容易封ip
@@ -69,8 +69,8 @@ IS_MORE_TICKET = False
 
 
 # 12306登录账号
-USER = "bbhhhh"
-PWD = "bhh1022"
+USER = "bb"
+PWD = "bb"
 
 # 加入小黑屋时间默认为5分钟，此功能为了防止僵尸票导致一直下单不成功错过正常的票
 TICKET_BLACK_LIST_TIME = 5
@@ -138,9 +138,8 @@ CHROME_CHROME_PATH = "/opt/google/chrome/google-chrome"
 
 # 如果COOKIE_TYPE=3, 则需配置RAIL_EXPIRATION、RAIL_DEVICEID的值
 RAIL_EXPIRATION = "1577421194537"
-RAIL_DEVICEID = "ASXtF8veI_BTkVCU_S2mQ6tQkZvabpyCBR4FcTuumI3j3EWEiy0TjM672n7MT0U88HZaZTxVByiXHVmzju9kxq-v5_JOIOqrNfwnUf5K6rF-H1NSxfvvdyXgTnNHdETJ7VEzD7BiV_-acdocbJ2F1igeL-B8x1AP"
 # RAIL_EXPIRATION = "1577034103293"
-# RAIL_DEVICEID = "CDno29Erc_Pf3FSXb4dzq-Op64EhWrsi5yUZKVIKR1MAfYo2qFlCeXD8VkexY7_1qg-ClV-fE8j9jgVlPZxRh3wVc2iqLe_5A8sdr62qZx4B22JPF8lFCjpgTKZ5ODW90HJd5tiQsJ1KR9nOqHRxHj1FT5LEIwfw"
+RAIL_DEVICEID = "CDno29Erc_Pf3FSXb4dzq-Op64EhWrsi5yUZKVIKR1MAfYo2qFlCeXD8VkexY7_1qg-ClV-fE8j9jgVlPZxRh3wVc2iqLe_5A8sdr62qZx4B22JPF8lFCjpgTKZ5ODW90HJd5tiQsJ1KR9nOqHRxHj1FT5LEIwfw"
 
 
 
